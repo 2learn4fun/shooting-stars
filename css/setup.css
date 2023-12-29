@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: burlywood;
+  --secondary-color: #7e3d26;
+}

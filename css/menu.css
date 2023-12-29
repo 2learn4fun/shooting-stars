@@ -1,33 +1,51 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+@import url(setup.css);
 
-body {
-    display: flex;
-    justify-content: center;
-}
+#root {
+    width: 100vw;
+    height: 100vh;
 
-main {
-    width: 1024px;
-    height: 657px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color: burlywood;
+
+    color: var(--primary-color);
     background-image: url(../assets/hubble-ultra-deep-field.jpeg);
 }
 
-li {
-    list-style-type: none;
+a {
+    color: var(--secondary-color);
 }
 
-a {
-    color: burlywood;
+li {
+    display: flex;
+    justify-content: center;
+
+    margin: 8px 0px 8px 0px;
+
+    list-style-type: none;
+    padding: 4px;
+    border: 4px ridge var(--secondary-color);
+    border-radius: 16px;
+
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+li a {
     text-decoration-line: none;
 }
 
-a:hover {
+li a:hover {
     text-decoration-line: underline;
+}
+
+.info-card {
+    max-width: 495px;
+
+    padding: 8px;
+    border: 4px ridge var(--secondary-color);
+
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
