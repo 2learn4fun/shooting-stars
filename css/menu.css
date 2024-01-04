@@ -5,12 +5,27 @@
     height: 100vh;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
     color: var(--primary-color);
     background-image: url(../assets/hubble-ultra-deep-field.jpeg);
+}
+
+main {
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#game-title h1 {
+    font-size: 3rem;
+}
+
+#game-title h2 {
+    font-size: 2rem;
 }
 
 a {
