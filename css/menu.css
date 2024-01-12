@@ -10,7 +10,7 @@
     color: var(--primary-color);
     background-image: url(../assets/hubble-ultra-deep-field.jpeg);
 
-    font-family: serif;
+    font-family: var(--primary-typed-font);
 }
 
 main {
@@ -52,7 +52,7 @@ li {
     list-style-type: none;
 }
 
-li a{
+li a {
     display: flex;
     justify-content: center;
 
