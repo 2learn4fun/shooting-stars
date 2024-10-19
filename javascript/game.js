@@ -61,26 +61,37 @@ function newAsteroidRain() {
 
 }
 
+function firstAsteroidWave() {
+  if(asteroid1Width < 50) {
+    asteroid1.style.rotate = `${asteroid1Rotation += 0.50}deg`;
+    asteroid1.style.width = `${asteroid1Width += 1}vw`;
+    asteroid1.style.top = `${asteroid1VerticalPosition +=2}vh`;
+    asteroid1.style.left = `${asteroid1HorizontalPosition +=2}vw`;
+  };
+}
+
+/*
 function dropAsteroids() {
 
   if(asteroid1Width < 50) {
-    asteroid1.style.rotate = `${asteroid1Rotation += 5}deg`;
+    asteroid1.style.rotate = `${asteroid1Rotation += 0.50}deg`;
     asteroid1.style.width = `${asteroid1Width += 1}vw`;
     asteroid1.style.top = `${asteroid1VerticalPosition +=2}vh`;
     asteroid1.style.left = `${asteroid1HorizontalPosition +=2}vw`;
   };
 
   if(asteroid2Width < 70) {
-    asteroid2.style.rotate = `${asteroid2Rotation += 5}deg`;
+    asteroid2.style.rotate = `${asteroid2Rotation += 0.50}deg`;
     asteroid2.style.width = `${asteroid2Width += 1}vw`;
     asteroid2.style.top = `${asteroid2VerticalPosition -=3}vh`;
     asteroid2.style.left = `${asteroid2HorizontalPosition -=2}vw`;
   };
 
   if(asteroid3Width < 70) {
-    asteroid3.style.rotate = `${asteroid3Rotation += 5}deg`;
+    asteroid3.style.rotate = `${asteroid3Rotation += 0.50}deg`;
     asteroid3.style.width = `${asteroid3Width += 1}vw`;
     asteroid3.style.top = `${asteroid3VerticalPosition +=2}vh`;
     asteroid3.style.left = `${asteroid3HorizontalPosition -=4}vw`;
   };
 }
+*/

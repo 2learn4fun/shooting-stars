@@ -73,6 +73,10 @@ li a:hover {
 }
 
 .info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     max-width: 495px;
 
     padding: 8px;
