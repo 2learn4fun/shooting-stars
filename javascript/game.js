@@ -8,6 +8,7 @@ let asteroid1Width = 0;
 let asteroid1Rotation = Math.random() * 360;
 let asteroid1VerticalPosition = 40;
 let asteroid1HorizontalPosition = 48;
+let asteroid1VerticalCadence = Math.random() * 4;
 
 let asteroid2 = document.createElement('img');
 asteroid2.id = 'asteroid2';
@@ -65,18 +66,18 @@ function firstAsteroidWave() {
   if(asteroid1Width < 50) {
     asteroid1.style.rotate = `${asteroid1Rotation += 0.50}deg`;
     asteroid1.style.width = `${asteroid1Width += 1}vw`;
-    asteroid1.style.top = `${asteroid1VerticalPosition +=2}vh`;
+    asteroid1.style.top = `${asteroid1VerticalPosition +=asteroid1VerticalCadence}vh`;
     asteroid1.style.left = `${asteroid1HorizontalPosition +=2}vw`;
   };
 }
 
-/*
+
 function dropAsteroids() {
 
   if(asteroid1Width < 50) {
     asteroid1.style.rotate = `${asteroid1Rotation += 0.50}deg`;
     asteroid1.style.width = `${asteroid1Width += 1}vw`;
-    asteroid1.style.top = `${asteroid1VerticalPosition +=2}vh`;
+    asteroid1.style.top = `${asteroid1VerticalPosition +=asteroid1VerticalCadence}vh`;
     asteroid1.style.left = `${asteroid1HorizontalPosition +=2}vw`;
   };
 
@@ -94,4 +95,4 @@ function dropAsteroids() {
     asteroid3.style.left = `${asteroid3HorizontalPosition -=4}vw`;
   };
 }
-*/
+
