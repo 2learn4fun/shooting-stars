@@ -33,6 +33,10 @@ asteroid1.id = 'asteroid1';
 asteroid1.src = '../assets/asteroid.png';
 asteroid1.style.position = 'relative';
 
+asteroid1.addEventListener('click', function(){
+  asteroid1.src = '../assets/explosion-gif.gif';
+});
+
 let asteroidWaves = 0;
 
 function beginGameplay() {
@@ -48,6 +52,7 @@ function newAsteroidRain() {
 }
 
 function spawnAsteroids() {
+  asteroid1.src = '../assets/asteroid.png';
   asteroid1Width = 0;
   asteroid1Rotation = Math.random() * 360;
   asteroid1VerticalPosition = 40;
@@ -60,7 +65,7 @@ function spawnAsteroids() {
 }
 
 function dropAsteroids() {
-  if(asteroidWaves < 5) {
+  if(asteroidWaves < 10) {
     if(asteroid1Width < 50) {
       asteroid1.style.rotate = `${asteroid1Rotation += 5}deg`;
       asteroid1.style.width = `${asteroid1Width += 1}vw`;
