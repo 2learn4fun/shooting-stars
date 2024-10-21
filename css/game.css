@@ -12,7 +12,7 @@
 
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .default-button-box {
@@ -29,6 +29,8 @@
   background-color: var(--primary-color);
 
   cursor: pointer;
+
+  text-decoration-line: none;
 }
 
 .default-button:hover {

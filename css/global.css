@@ -18,6 +18,7 @@
 
   max-width: 495px;
 
+  margin: 20px;
   padding: 8px;
   border: 4px ridge var(--secondary-color);
 
