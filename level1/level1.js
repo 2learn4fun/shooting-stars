@@ -35,6 +35,7 @@ asteroid1.style.position = 'relative';
 
 asteroid1.addEventListener('click', function(){destroyAsteroid()});
 
+var asteroidsVelocity = 0.50;
 let asteroidWaves = 0;
 let score = 0;
 
@@ -47,7 +48,7 @@ function beginGameplay() {
 
 function newAsteroidRain() {
   spawnAsteroids();
-  setInterval(dropAsteroids, 50);
+  setInterval(dropAsteroids, 25);
 }
 
 function spawnAsteroids() {
@@ -64,33 +65,40 @@ function spawnAsteroids() {
 }
 
 function dropAsteroids() {
-  if(asteroidWaves < 10) {
+  if(asteroidWaves < 60) {
     if(asteroid1Width < 50) {
       asteroid1.style.rotate = `${asteroid1Rotation += 5}deg`;
-      asteroid1.style.width = `${asteroid1Width += 0.50}vw`;
+      asteroid1.style.width = `${asteroid1Width += asteroidsVelocity/2}vw`;
       if(asteroid1Direction == 0) {
         asteroid1.style.top = `${asteroid1VerticalPosition +=0}vh`;
-        asteroid1.style.left = `${asteroid1HorizontalPosition +=1}vw`;
+        asteroid1.style.left = `${asteroid1HorizontalPosition +=asteroidsVelocity}vw`;
       }
       if(asteroid1Direction == 1) {
-        asteroid1.style.top = `${asteroid1VerticalPosition +=0.50}vh`;
-        asteroid1.style.left = `${asteroid1HorizontalPosition -=1}vw`;
+        asteroid1.style.top = `${asteroid1VerticalPosition +=asteroidsVelocity/2}vh`;
+        asteroid1.style.left = `${asteroid1HorizontalPosition -=asteroidsVelocity}vw`;
       }
       if(asteroid1Direction == 2) {
-        asteroid1.style.top = `${asteroid1VerticalPosition -=1}vh`;
-        asteroid1.style.left = `${asteroid1HorizontalPosition +=1}vw`;
+        asteroid1.style.top = `${asteroid1VerticalPosition -=asteroidsVelocity}vh`;
+        asteroid1.style.left = `${asteroid1HorizontalPosition +=asteroidsVelocity}vw`;
       }
       if(asteroid1Direction == 3) {
-        asteroid1.style.top = `${asteroid1VerticalPosition -=1.5}vh`;
-        asteroid1.style.left = `${asteroid1HorizontalPosition -=1}vw`;
+        asteroid1.style.top = `${asteroid1VerticalPosition -=asteroidsVelocity*1.50}vh`;
+        asteroid1.style.left = `${asteroid1HorizontalPosition -=asteroidsVelocity}vw`;
       }
 
       if(asteroid1Width == 50) {
-        spawnAsteroids();
         asteroidWaves++;
+        if(asteroidWaves == 8) {asteroidsVelocity=1;};
+        if(asteroidWaves == 28) {asteroidsVelocity=1.25;};
+        if(asteroidWaves == 50) {asteroidsVelocity=0.50;};
+
+        if(asteroidWaves == 60) {
+          gameArea.removeChild(asteroid1);
+          finishLevel();
+        } else {spawnAsteroids();};
       }
     };
-  } else {finishLevel();}
+  }
 
 }
 

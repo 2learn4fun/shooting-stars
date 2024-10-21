@@ -8,7 +8,7 @@
 
 #info-screen {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,4 +38,10 @@
 
 .learn-more-gif {
   width: 20%;
+}
+
+@media(max-height: 480px) {
+  #info-screen {
+    height: auto;
+  }
 }
