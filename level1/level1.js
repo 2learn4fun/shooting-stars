@@ -135,12 +135,16 @@ function finishLevel() {
     </a>
     <br>
     <div class = "default-button-box">
-      <a href = "../index.html" class = "default-button" id = "continue-button">
+      <a href = "../level2/level2.html" class = "default-button" id = "continue-button">
         Próximo nível
       </a>
     </div>
   </article>
 `;
+
+if(score > localStorage.getItem("level1Score")) {
+  localStorage.setItem("level1Score", score);
+}
 
 gameArea.appendChild(infoScreen);
 }
