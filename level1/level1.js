@@ -64,7 +64,7 @@ function spawnAsteroids() {
 }
 
 function dropAsteroids() {
-  if(asteroidWaves < 3) {
+  if(asteroidWaves < 10) {
     if(asteroid1Width < 50) {
       asteroid1.style.rotate = `${asteroid1Rotation += 5}deg`;
       asteroid1.style.width = `${asteroid1Width += 0.50}vw`;
@@ -107,9 +107,24 @@ function finishLevel() {
       atravessa a atmosfera da terra ela se dispersa na cor azul aos nossos
       olhos, e durante o nascer e pôr do sol o céu muda de cor pois a luz do
       sol precisa atravessar uma camada mais grossa da atmosfera da terra até
-      chegar aos nossos olhos, fazendo com que ele fique em tons de 
-      amarelo, laranja e vermelho.
+      chegar aos nossos olhos, fazendo com que o céu fique em tons de 
+      amarelo, laranja e vermelho. Já de noite, quando sol está do outro lado
+      da terra, conseguimos ver o céu como ele realmente é, e o mesmo efeito
+      acontece com a luz da lua, estrelas e planetas quando se aproximam do 
+      horizonte e mudam de cor. Também é por isso que antes das 10:00 da manhã
+      e depois das 4:00 da tarde a luz do sol chega mais fraca até nós, fazendo
+      com que esse seja um horário mais adequado para se tomar sol.
     </p>
+    <br>
+    <br>
+    <img src = "../assets/learn-more.webp" class = "learn-more-gif">
+    <a href = 
+      "https://brasilescola.uol.com.br/fisica/por-que-ceu-azul.htm#:~:text=O%20
+      c%C3%A9u%20%C3%A9%20azul%20porque,bem%20refletida%20%C3%A9%20a%20azul."
+      target = "blank"
+    >
+      Saiba mais
+    </a>
     <br>
     <div class = "default-button-box">
       <a href = "../index.html" class = "default-button" id = "continue-button">
