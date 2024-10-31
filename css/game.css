@@ -1,0 +1,47 @@
+@import url(menu.css);
+
+#game-area {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/hubble-ultra-deep-field.jpeg);
+}
+
+#info-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-button-box {
+  display: flex;
+  justify-content: center;
+}
+
+.default-button {
+  padding: 4px;
+  border: 4px ridge var(--secondary-color);
+  border-radius: 16px;
+
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+
+  cursor: pointer;
+
+  text-decoration-line: none;
+}
+
+.default-button:hover {
+  text-shadow: 0px 4px 20px black;
+}
+
+.learn-more-gif {
+  width: 20%;
+}
+
+@media(max-height: 480px) {
+  #info-screen {
+    height: auto;
+  }
+}
